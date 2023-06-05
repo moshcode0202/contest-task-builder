@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Form fields */
+.form-label {
+    @apply text-black text-base block mb-2;
+}
+.form-input,
+.form-textarea,
+.form-select,
+.form-multiselect {
+    @apply w-full px-4 bg-[#fafafd] focus:ring-0 border-black border-opacity-30 hover:border-green focus:border-green rounded text-[13px] leading-5 text-black focus:bg-white font-normal placeholder-[#A7B4C3];
+}
+.form-select {
+    @apply pr-8;
+}
+.form-textarea {
+    @apply min-h-[100px];
+}
+.forms-checkbox input:checked ~ .dot {
+    @apply bg-white translate-x-full left-[6px];
+}
+.forms-checkbox input:checked ~ .inputbox {
+    @apply bg-[#5a68ff];
+}
+.custom-number-input input[type='number']::-webkit-inner-spin-button,
+.custom-number-input input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.custom-number-input input:focus {
+    outline: none !important;
+}
+.custom-number-input button:focus {
+    outline: none !important;
+}
+.error {
+    @apply !border !border-denger;
+}
+.edition-check-input {
+    @apply relative z-10 appearance-none rounded-full h-6 w-6 border border-[#dedee9] bg-[#fafafd] checked:bg-[#0ee29f] checked:border-[#0ee29f] focus:outline-none  align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer;
+}
+.edition-check-input:disabled {
+    @apply bg-none border-[#dedee9]/30 bg-[#fafafd]/30 cursor-auto;
+}
+.box-insta {
+    box-shadow: 0 9px 26px 0 rgba(49, 57, 67, 0.02);
+    background-image: conic-gradient(from 0.29turn, #fe3a71, #ffcb72 0.34turn, #a74eb8 0.48turn, #6776d0 0.62turn, #d43bb3 0.85turn, #fe3a71);
+}
+.box-insta-blur {
+    background-image: conic-gradient(from 0.29turn, #fe3a71, #ffcb72 0.34turn, #a74eb8 0.48turn, #6776d0 0.62turn, #d43bb3 0.85turn, #fe3a71);
+}
